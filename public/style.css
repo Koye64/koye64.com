@@ -1,0 +1,238 @@
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("./assets/fonts/JetBrainsMonoNerdFont-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("./assets/fonts/JetBrainsMonoNerdFont-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("./assets/fonts/JetBrainsMonoNerdFont-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("./assets/fonts/JetBrainsMonoNerdFont-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+:root {
+  --crust: #11111b;
+  --mantle: #181825;
+  --base: #1e1e2e;
+  --surface0: #313244;
+  --surface1: #45475a;
+  --surface2: #585b70;
+  --overlay0: #6c7086;
+  --overlay1: #7f849c;
+  --overlay2: #9399b2;
+  --subtext1: #a6adc8;
+  --subtext2: #bac2de;
+  --text: #cdd6f4;
+  --lavender: #b4befe;
+  --blue: #89b4fa;
+  --sapphire: #74c7ec;
+  --sky: #89dceb;
+  --teal: #94e2d5;
+  --green: #a6e3a1;
+  --yellow: #f9e2af;
+  --peach: #fab387;
+  --maroon: #eba0ac;
+  --red: #f38ba8;
+  --mauve: #cba6f7;
+  --pink: #f5c2e7;
+  --flamingo: #f2cdcd;
+  --rosewater: #f5e0dc;
+}
+
+* {
+  color: var(--text);
+  font-family: JetBrainsMono;
+}
+
+::selection {
+  color: var(--base);
+  background: var(--rosewater);
+}
+
+body {
+  margin: 0;
+  background-color: var(--crust);
+}
+
+em {
+  color: var(--green);
+  font-weight: bold;
+}
+
+a {
+  color: var(--sapphire);
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  color: var(--mauve);
+}
+
+hr {
+  color: var(--surface1);
+  background-color: currentcolor;
+  border: none;
+  border-radius: 2px;
+  height: 2px;
+  width: 100%;
+  margin: 16px 0px;
+  noshade;
+}
+
+.window {
+  background-color: var(--base);
+  padding: 0.25rem 1rem;
+  margin: 1rem auto;
+  border-radius: 10px;
+  border: 2px solid var(--surface0);
+  width: 80%;
+  max-width: 64rem;
+}
+
+.floating {
+  box-shadow: 0px 0px 16px black;
+}
+
+.maxsize {
+  max-width: 48rem;
+}
+
+.badtext {
+  color: var(--red);
+}
+
+nav {
+  position: fixed;
+  top: 0px;
+  width: calc(100% - 16px);
+  margin: 0px;
+  background-color: var(--base);
+  padding: 8px 8px;
+  border: none;
+  height: 2.5em;
+  border-bottom: 2px solid var(--surface0);
+  overflow: auto;
+  display: flex;
+}
+
+nav > a {
+  white-space: nowrap;
+  margin: 2px 4px;
+  background-color: var(--base);
+  border: 2px solid currentcolor;
+  border-bottom: none;
+  padding: 4px 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+nav > a:hover {
+  border-bottom: 2px solid currentcolor;
+  margin-bottom: 0px;
+}
+
+#navhome {
+  color: var(--red);
+}
+#navgames {
+  color: var(--yellow);
+}
+#navblog {
+  color: var(--green);
+}
+#navcontact {
+  color: var(--mauve);
+}
+
+#copyright {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  bottom: 0px;
+}
+
+#welcomeheader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#welcomeheader h1 {
+  max-width: 100%;
+  width: 6em;
+  text-align: center;
+}
+
+#h1home {
+  color: var(--red);
+}
+#h1minecraft {
+  color: var(--yellow);
+}
+#h1blog {
+  color: var(--green);
+}
+#h1contact {
+  color: var(--mauve);
+}
+
+main {
+  margin-top: calc(4.5rem + 2px);
+}
+
+body {
+  background-image: url("./assets/images/websitebg.svg");
+  background-size: cover;
+  background-color: var(--crust);
+  background-attachment: fixed;
+}
+
+h1, h2 {
+  /*box-shadow: 0px 0px 16px var(--crust);*/
+  background-color: var(--base);
+  border-radius: 10px;
+  padding: 0.25rem 1rem;
+  margin: 0.5rem 0px;
+  border: 2px solid currentcolor;
+  max-width: fit-content;
+}
+h2, h3, h4, h5, h6 {
+  font-style: italic;
+  font-weight: bold;
+}
+
+h1 {
+  color: var(--blue);
+}
+h2 {
+  color: var(--mauve);
+}
+h3 {
+  color: var(--red);
+}
+h4 {
+  color: var(--yellow);
+}
+h5 {
+  color: var(--green);
+}
+h6 {
+  color: var(--green);
+}
+
