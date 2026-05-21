@@ -11,7 +11,10 @@
   {
     devShells.${system}.default = pkgs.mkShell {
       packages = with pkgs; [
-        nginx
+        (writeShellScriptBin "serve" ''
+          ${nixpkgs.lib.getExe' xdg-utils "xdg-open"} "http://localhost:8282/"
+          ${nixpkgs.lib.getExe static-web-server} -p 8282 -d ${toString ./public} -g trace
+        '')
       ];
     };
   };
