@@ -13,7 +13,7 @@
       packages = with pkgs; [
         (writeShellScriptBin "serve" ''
           ${nixpkgs.lib.getExe' xdg-utils "xdg-open"} "http://localhost:8282/"
-          ${nixpkgs.lib.getExe static-web-server} -p 8282 -d ${toString ./public} -g trace
+          ${nixpkgs.lib.getExe static-web-server} -p 8282 -d ./public -g trace
         '')
       ];
     };
